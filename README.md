@@ -30,16 +30,6 @@ Close app on the Chromecast:
 
 	$ cast --name Hifi quit
 
-## Bug reports
-
-Please open a github issue including cast version number `cast --version`.
-
-## Pull requests
-
-Pull requests are gratefully received!
-
-- please 'gofmt' the code.
-
 ## Credits
 
 Based on go library port by [ninjasphere](https://github.com/ninjasphere/node-cast)
