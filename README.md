@@ -1,5 +1,3 @@
-[![Build status](https://secure.travis-ci.org/barnybug/go-cast.png?branch=master)](https://secure.travis-ci.org/barnybug/go-cast)
-
 # go-cast
 
 A command line tool to control Google Chromecast devices.
