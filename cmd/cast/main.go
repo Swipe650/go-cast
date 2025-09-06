@@ -124,6 +124,16 @@ func main() {
 			Usage:  "Discover and watch  Chromecast devices for events",
 			Action: watchCommand,
 		},
+		{
+			Name:   "mute",
+			Usage:  "Mute the Chromecast",
+			Action: cliCommand,
+		},
+		{
+			Name:   "unmute",
+			Usage:  "Unmute the Chromecast",
+			Action: cliCommand,
+		},
 	}
 	app.Run(os.Args)
 	log.Println("Done")
