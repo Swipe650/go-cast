@@ -300,6 +300,8 @@ var minArgs = map[string]int{
 	"quit":   0,
 	"volume": 1,
 	"load":   1,
+	"mute":   0,
+	"unmute": 0,
 }
 
 var maxArgs = map[string]int{
@@ -309,6 +311,8 @@ var maxArgs = map[string]int{
 	"quit":   0,
 	"volume": 1,
 	"load":   1,
+	"mute":   0,
+	"unmute": 0,
 }
 
 func checkCommand(cmd string, args []string) bool {
@@ -401,6 +405,20 @@ func runCommand(ctx context.Context, client *cast.Client, cmd string, args []str
 	case "quit":
 		receiver := client.Receiver()
 		_, err := receiver.QuitApp(ctx)
+		checkErr(err)
+	
+	case "mute":
+		receiver := client.Receiver()
+		muted := true
+		volume := controllers.Volume{Muted: &muted}
+		_, err := receiver.SetVolume(ctx, &volume)
+		checkErr(err)
+
+	case "unmute":
+		receiver := client.Receiver()
+		muted := false
+		volume := controllers.Volume{Muted: &muted}
+		_, err := receiver.SetVolume(ctx, &volume)
 		checkErr(err)
 
 	default:
