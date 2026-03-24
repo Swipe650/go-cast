@@ -25,8 +25,8 @@ Stop playback:
 Set volume:
 
 	$ cast-linux-amd64 --name Hifi volume 0.5
-	$ cast-linux-amd64 -name 'Hifi' mute
-	$ cast-linux-amd64 -name 'Hifi' unmute
+	$ cast-linux-amd64 -name Hifi mute
+	$ cast-linux-amd64 -name Hifi unmute
 
 Close app on the Chromecast:
 
