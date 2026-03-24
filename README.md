@@ -7,28 +7,30 @@ A command line tool to control Google Chromecast devices.
 Download the latest binaries from:
 https://github.com/swipe650/go-cast/releases/latest
 
-    $ sudo mv cast-my-platform /usr/local/bin/cast
-    $ sudo chmod +x /usr/local/bin/cast
+    $ sudo mv cast-linux-amd64 /usr/local/bin/cast-linux-amd64
+    $ sudo chmod +x /usr/local/bin/cast-linux-amd64
 
 ## Usage
 
-	$ cast help
+	$ cast-linux-amd64 help
 
 Play a media file:
 
-	$ cast --name Hifi media play http://url/file.mp3
+	$ cast-linux-amd64 --name Hifi media play http://url/file.mp3
 
 Stop playback:
 
-	$ cast --name Hifi media stop
+	$ cast-linux-amd64 --name Hifi media stop
 
 Set volume:
 
-	$ cast --name Hifi volume 0.5
+	$ cast-linux-amd64 --name Hifi volume 0.5
+	$ cast-linux-amd64 -name 'Hifi' mute
+	$ cast-linux-amd64 -name 'Hifi' unmute
 
 Close app on the Chromecast:
 
-	$ cast --name Hifi quit
+	$ cast-linux-amd64 --name Hifi quit
 
 ## Credits
 
